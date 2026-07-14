@@ -1,0 +1,8 @@
+def cleanWOrd(word):
+    if len(word)==1:
+        return word # that mean if word doesn't have two word in the same character ofr example=> ww
+    if word[0]==word[1]: # her that mean if the word has two word in the same characther here the show if index [0] == index[1] 
+        return cleanWOrd(word[1:]) # that mean to remove one of the same character and to start when we finish
+    return word[0]+ cleanWOrd(word[1:])
+
+print(cleanWOrd('wwwwwwooooooorrrrrrllllldddd'))
